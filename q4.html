@@ -1,0 +1,30 @@
+<html ng-app="notesApp">
+<head>
+	 <title>Q4</title>
+</head>
+<body ng-controller="mycontroller as c1">
+	<table>
+		<tr ng-repeat-start="i in c1.x">
+			<td><h1>{{i.id}}</h1></td>
+		</tr>
+		<tr ng-repeat-end>
+			<td><h1>{{i.fname}}:<h1></td>
+			<td><h1>{{i.marks}}</h1></td>
+		</tr>
+	</table>
+	<script src="angular.js"></script>
+ 	<script type="text/javascript">
+ 		angular.module('notesApp',[])
+ 		.controller('mycontroller',[function()
+		                            {
+										var self=this;
+										self.x=[
+											{id:1,fname:"Raju",marks:22},
+											{id:2,fname:"Ravi",marks:45},
+											{id:3,fname:"Manju",marks:24},
+											{id:4,fname:"Anand",marks:84}
+										];
+								    }]);
+ 	</script>
+</body>
+</html>

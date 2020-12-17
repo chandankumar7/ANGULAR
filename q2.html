@@ -1,0 +1,27 @@
+<html ng-app="notesApp">
+<head>
+    <title>Q2</title>
+</head>
+
+<body ng-controller="myController as c1">
+     <div ng-repeat="i in c1.x">
+	 <h1>{{i.id}}:{{i.fname}} {{i.stream}}</h1>
+	 </div>
+	
+	<script src="angular.js"></script>
+	<script type="text/javascript">
+	  angular.module('notesApp',[])
+	    .controller('myController',[function()
+                           		{
+	                                var self=this;
+									self.x=[
+											    {id:1,fname:'Roy',stream:'Civil'},
+											    {id:2,fname:'John',stream:'Mech'},
+												{id:3,fname:'Seema',stream:'Mining'},
+												{id:4,fname:'Tina',stream:'Computer'}
+											];
+								        }
+								    ]);
+</script>
+</body>
+</html>

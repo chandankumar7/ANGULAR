@@ -1,0 +1,26 @@
+<html ng-app="notesApp">
+<head>
+    <title>Q3</title>
+</head>
+
+<body ng-controller="myController as c1">
+     <div ng-repeat="(i,j) in c1.x">
+	 <h1>{{i}}:{{j.id}}-->{{j.sub}}=>{{j.marks}}</h1>
+	 </div>
+	
+	<script src="angular.js"></script>
+	<script type="text/javascript">
+	  angular.module('notesApp',[])
+	    .controller('myController',[function()
+                           		{
+	                                var self=this;
+									self.x={
+											  Harish:{id:11,sub:"CC",marks:85},
+ 				                              Gautam:{id:12,sub:"CG",marks:58},
+ 				                              Pinky:{id:13,sub:"OS",marks:95}
+											};
+								        }
+								    ]);
+</script>
+</body>
+</html>
