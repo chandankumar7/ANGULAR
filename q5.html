@@ -5,6 +5,7 @@
 
 <body ng-controller="MainCtrl as ctrl">
     <form ng-submit="ctrl.submit()" name="myForm">
+	     Name:
         <input type="text"name="uname" ng-model="ctrl.user.username"required ng-minlength="4">
 		
             <span style="color:red" ng-show="myForm.uname.$error.required">This is a required field</span>
@@ -12,6 +13,7 @@
             <span style="color:red" ng-show="myForm.uname.$error.minlength">Minimum length required is 4 </span>
 			
             <span style="color:red" ng-show="myForm.uname.$invalid">This field is invalid</span><br><br>
+			Password:
 			
             <input type="password" name="pwd" ng-model="ctrl.user.password" required>
 			
